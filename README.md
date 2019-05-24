@@ -106,3 +106,21 @@ Omdat dit 2 handigheidjes zijn, maar geen applicaties die het gebruik van de res
 - Gebruiker aan het einde een overzicht geven van de selecties die zijn gedaan
 - aria labels gebruiken voor de screenreader
 - tab-index=0 wanneer content met tab bereikbaar moet zijn
+
+## Exclusive design principles
+
+### Study situation
+
+Ik heb Larissa's situatie bestudeerd en geprobeerd mij in te leven door de brailleregel te gebruiken. Ook heb ik bij het testen geprobeerd te letten op de minder voor de hand liggende conclusies.
+
+### Ignore conventions
+
+Ik heb de conventies grotendeels links laten liggen, onder andere door bepaalde delen html niet geheel semantisch te schrijven (tab-index '0' op vrij veel elementen) om te zorgen dat de gebruikservaring beter werd. Ook is er geen styling toegepast (obviously).
+
+### Add nonsense
+
+Hier had ik nogal moeite mee, ik heb geprobeerd de applicatie leuk in het gebruik te maken door er voor te zorgen dat het goed zou werken. Larissa gaf ook aan dat ze de leukste ervaring op het web vond dat alles eens een keer werkte zoals ze verwachtte.
+
+### Prioritise Identity
+
+Alles in de applicatie en in mijn onderzoek is gericht op Larissa. Ik heb geprobeerd om in plaats van mij te richten op een groep users, echt één persoon als doelgroep te nemen.
