@@ -8,6 +8,8 @@ Navigatie met meerdere lagen, hoofdmenu en submenu voor content.
 
 Reisplanner waarbij naderhand een overzicht gegeven wordt, hierna kan de gebruiker nog bepaalde aspecten van de reis aanpassen.
 
+![screenshot application](./screenshot.png)
+
 ## User scenario
 
 Larissa wil een reis boeken, maar de conventionele methodes om dat te doen voldoen niet. Om wel op een plezierige manier een reis te boeken besluit ze mijn applicatie te gebruiken.
