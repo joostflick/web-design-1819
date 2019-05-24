@@ -2,6 +2,16 @@
 
 Larissa kan enigzins onderscheid maken in kleuren/contrast, maar veel te weinig om van een scherm gebruik te maken. Niet blind vanaf geboorte dus braille is niet haar eerste schrijftaal.
 
+## Prototype
+
+Navigatie met meerdere lagen, hoofdmenu en submenu voor content.
+
+Reisplanner waarbij naderhand een overzicht gegeven wordt, hierna kan de gebruiker nog bepaalde aspecten van de reis aanpassen.
+
+## User scenario
+
+Larissa wil een reis boeken, maar de conventionele methodes om dat te doen voldoen niet. Om wel op een plezierige manier een reis te boeken besluit ze mijn applicatie te gebruiken.
+
 ## Testen:
 
 - Navigatie layout met meerdere lagen
@@ -48,6 +58,9 @@ Larissa kan enigzins onderscheid maken in kleuren/contrast, maar veel te weinig 
 
 ## Eigen tests met de brailleregel
 
+Wanneer past content aan naar de brailleregel?
+Aria live polite werkt, brailleregel komt altijd overeen met de text to speech.
+
 dit deel van de read me is geschreven op de braille regel
 
 dat gebeurt door middel van een perkins stijl toetsenbord met acht toetsen
@@ -67,6 +80,7 @@ Omdat dit 2 handigheidjes zijn, maar geen applicaties die het gebruik van de res
 
 - Verder gegaan op ticketboek sites moeilijkheden, datumprikker met aanpasmogelijkheid toegevoegd aan de bestaande navigatie die ik had gemaakt
 - Volgorde van navigatie verbeterd dmv tab-index
+- Aria labels om content in dropdowns aan te geven
 
 ## Uitslag/bevindingen test 2 met Larissa
 
