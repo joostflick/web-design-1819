@@ -1,0 +1,154 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav id="head">
+      <a href="#contentNav">Ga naar content</a>
+      <a href="/text-css.html">Test 1 CSS</a>
+      <a href="/text-js.html">Test 2 JS</a>
+      <a href="#menu">Menu</a>
+      <a href="#footer">Ga naar footer</a>
+    </nav>
+    <nav id="menu">
+      <a href="/index.html">Home</a>
+      <a href="/verhalen">Verhalen</a>
+      <a href="/about">Over ons</a>
+      <a href="/contact">Contact</a>
+    </nav>
+    <div id="contentNav">
+      <h2>Verander tekst met buttons</h2>
+      <h3 id="tekst" tabindex="0" aria-live="polite">Dit is een oefentekst</h3>
+      <button onClick="tekst1()">Tekst 1</button>
+      <button onClick="tekst2()">Tekst 2</button>
+      <button onClick="tekst3()">Tekst 3</button>
+    </div>
+    <div id="listorder">
+      <h2>Dynamische lijst</h2>
+      <ul tabindex="0" id="list" aria-live="polite">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+      </ul>
+      <button onClick="timer()">Verander de lijstvolgorde</button>
+      <button onClick="interval.clearAll()">Stop</button>
+    </div>
+    <div id="static-text" tabindex="0">
+      <h2>Statische tekst</h2>
+      <h3>
+        Hier staat een langer verhaaltje om te kijken hoe meerdere regels tekst
+        door de brailleregel worden geïnterpreteerd. <br />
+        Deze tekst verandert niet. <br />
+        <br />
+        Einde van dit tekstblok
+      </h3>
+    </div>
+    <div id="changing-text">
+      <h2>Dynamische tekst</h2>
+      <h3 id="dynamicText" aria-live="polite" tabindex="0">
+        Hier staat een verhaaltje met dynamische content
+      </h3>
+      <button onClick="changeText(3000)">
+        Tekst veranderen interval 3 seconden
+      </button>
+      <button onClick="changeText(2000)">
+        Tekst veranderen interval 2 seconden
+      </button>
+      <button onClick="changeText(1000)">
+        Tekst veranderen interval 1 seconden
+      </button>
+      <button onClick="interval.clearAll()">Stop</button>
+    </div>
+    <div id="characters" tabindex="0">
+      <h2>Characters testen</h2>
+      Emoji: <br />
+      🙄 😏 😣 😥 😮
+      <br />
+      Speciale tekens: <br />
+      ☼♫▓®♥‼ <br />
+    </div>
+
+    <footer id="footer" tabindex="0">
+      <p>Dit is de footer</p>
+    </footer>
+    <script>
+      function tekst1() {
+        document.getElementById('tekst').innerText = 'Hallo, ik ben tekst 1'
+      }
+      function tekst2() {
+        document.getElementById('tekst').innerText =
+          'Goedendag, dit is de tweede tekst'
+      }
+      function tekst3() {
+        document.getElementById('tekst').innerText = 'Tada, tekst 3'
+      }
+      function timer() {
+        interval.make(function shuffle() {
+          var ul = document.querySelector('ul')
+          for (var i = ul.children.length; i >= 0; i--) {
+            ul.appendChild(ul.children[(Math.random() * i) | 0])
+          }
+          window.location.hash = '#list'
+        }, 4000)
+      }
+
+      var interval = {
+        // to keep a reference to all the intervals
+        intervals: new Set(),
+
+        // create another interval
+        make(...args) {
+          var newInterval = setInterval(...args)
+          this.intervals.add(newInterval)
+          return newInterval
+        },
+
+        // clear a single interval
+        clear(id) {
+          this.intervals.delete(id)
+          return clearInterval(id)
+        },
+
+        // clear all intervals
+        clearAll() {
+          console.log('clear all')
+
+          for (var id of this.intervals) {
+            this.clear(id)
+          }
+        }
+      }
+
+      function changeText(time) {
+        var sentences = [
+          'Dit is een willekeurige tekst',
+          'Hier een andere tekst die op de brailleregel moet verschijnen',
+          'Hier staat een zinnetje',
+          'test test test'
+        ]
+        var text = document.getElementById('dynamicText')
+
+        interval.make(function changeSentence() {
+          var sentence = sentences[Math.floor(Math.random() * sentences.length)]
+          text.innerText = sentence
+          window.location.hash = '#dynamicText'
+        }, time)
+      }
+
+      // function shuffle() {
+      //   var ul = document.querySelector('ul')
+      //   for (var i = ul.children.length; i >= 0; i--) {
+      //     ul.appendChild(ul.children[(Math.random() * i) | 0])
+      //   }
+      // }
+    </script>
+  </body>
+</html>

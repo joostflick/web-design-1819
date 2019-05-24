@@ -1,0 +1,33 @@
+nav {
+  display: flex;
+  font-size: 1.2rem;
+}
+
+nav > a {
+  padding: 10px;
+  margin: 5px;
+  background-color: lightcoral;
+}
+
+.content {
+  padding: 10px;
+  margin: 5px;
+}
+
+footer {
+  padding: 10px;
+  margin: 5px;
+  background-color: lightcoral;
+}
+
+label {
+  display: none;
+}
+
+input[type='radio']:checked + label {
+  display: block;
+}
+
+#tekst3:checked ~ #tekstCSS3 {
+  display: block;
+}

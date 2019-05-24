@@ -1,0 +1,113 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Site tab navigatie</title>
+  </head>
+  <body>
+    <header>
+      <nav id="head">
+        <a href="#contentNav">Ga naar content</a>
+        <a href="#menu">Submenu</a>
+        <a href="#footer">Ga naar footer</a>
+      </nav>
+      <nav id="menu">
+        <a href="/version2.html">Reisplanner</a>
+        <a href="/verhalen">Mijn geboekte reis</a>
+        <a href="/about">Over ons</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </header>
+    <section class="content">
+      <nav id="contentNav">
+        <a href="#h1">Datum prikken</a>
+        <a href="#h2">Locatie kiezen</a>
+        <a href="#h3">Reisgezelschap</a>
+      </nav>
+      <div id="h1" tabindex="0">
+        <h2>Datum prikken</h2>
+        <p>Wanneer zou je graag op vakantie willen gaan?</p>
+        <p>Maand</p>
+        <select id="monthSelect">
+          <option>Januari</option>
+          <option>Februari</option>
+          <option>Maart</option>
+          <option>April</option>
+          <option>Mei</option>
+          <option>Juni</option>
+          <option>Juli</option>
+          <option>Augustus</option>
+          <option>September</option>
+          <option>Oktober</option>
+          <option>November</option>
+          <option>December</option>
+        </select>
+      </div>
+      <div id="iets" tabindex="0">
+        <p>Dag</p>
+        <select id="daySelect">
+          <option aria-label="Maandag">1</option>
+          <option aria-label="Dinsdag">2</option>
+          <option aria-label="Woensdag">3</option>
+          <option aria-label="Donderdag">4</option>
+          <option aria-label="Vrijdag">5</option>
+          <option aria-label="Zaterdag">6</option>
+          <option aria-label="Zondag">7</option>
+        </select>
+      </div>
+      <div id="h2" tabindex="0">
+        <h2>Locatie kiezen</h2>
+        <p>
+          Waarheen wil je op vakantie?
+        </p>
+        <select id="locationSelect">
+          <option>Frankrijk</option>
+          <option>Costa Rica</option>
+          <option>Thailand</option>
+          <option>Mexico</option>
+          <option>Turkije</option>
+          <option>Australië</option>
+        </select>
+      </div>
+      <div id="h3" tabindex="0">
+        <h2>Reisgezelschap</h2>
+        <p>
+          Met hoeveel personen ga je reizen?
+        </p>
+        <select id="personSelect">
+          <option aria-label="1 persoon">1</option>
+          <option aria-label="2 personen">2</option>
+          <option aria-label="3 personen">3</option>
+          <option aria-label="4 personen">4</option>
+          <option aria-label="5 personen">5</option>
+          <option aria-label="6 personen">6</option>
+          <option aria-label="7 personen">7</option>
+        </select>
+      </div>
+      <h3>Je huidige selectie</h3>
+      <p tabindex="0">
+        Op dit moment ga je zondag 8 april met 3 personen naar Frankrijk, is dat
+        correct?
+      </p>
+      <a href="./step-2.html">Ja, bevestig deze boeking</a>
+
+      <a href="#change">Nee ik wil nog iets aanpassen</a>
+      <div tabindex="0">
+        <section id="change">
+          <p>Wat wil je aanpassen?</p>
+        </section>
+        <a href="#monthSelect">De maand, april</a>
+        <a href="#daySelect">De dag, zondag de 8ste</a>
+        <a href="#locationSelect">De locatie, Frankrijk</a>
+        <a href="#personSelect">Het reisgezelschap, 3 personen</a>
+      </div>
+    </section>
+
+    <footer id="footer" tabindex="0">
+      <p>Dit is de footer</p>
+    </footer>
+  </body>
+  <script src="index.js"></script>
+</html>
