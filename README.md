@@ -126,3 +126,17 @@ Hier had ik nogal moeite mee, ik heb geprobeerd de applicatie leuk in het gebrui
 Alles in de applicatie en in mijn onderzoek is gericht op Larissa. Ik heb geprobeerd om in plaats van mij te richten op een groep users, echt één persoon als doelgroep te nemen.
 
 Ook merkte ik dat Larissa bijna nooit de screenreader zijn verhaal af liet maken door de snelheid waarop ze navigeerde. Daarom heb ik geprobeerde de belangrijkste informatie als eerst uitgesproken te laten worden.
+
+## Design principles
+
+Ik heb geprobeerd de primary en secondary actions gescheiden te houden met de submenus.
+
+Verder werkt de applicatie heel erg stapsgewijs, waardoor de gebruiker de controle behoudt en de aandacht goed vast gehouden kan worden. Dit zou ook voor duidelijkheid moeten zorgen.
+
+Ik denk dat daardoor de volgende principles in dit prototype naar voren komen:
+
+- Clarity is job
+- Conserve attention
+- Keep users in control
+- Provide a natural next step
+- Primary / secondary actions
